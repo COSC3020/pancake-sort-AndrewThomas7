@@ -37,9 +37,6 @@ function pancakeSort(array) {
         if (ArrayLen == 1 && array[0]==Math.min(...arrPop)) {
             return array;
         }
-        // if(max==array[1]){
-        //     return pancakeSort_(flip(array,ArrayLen))
-        // }
         if (Flipindex == 0 ||max==array[array.length-1]) {
             ArrayLen -= 1;
             return pancakeSort_(array,ArrayLen);
