@@ -19,8 +19,12 @@ function flip(array, n) {
     }
     return Ostack;
 }
+
 // Use only flip() here to manipulate the array
 function pancakeSort(array) {
+    if(array.len==0){
+        return array;
+    }
     function pancakeSort_(array,ArrayLen){
         var arrPop=array.slice(0,ArrayLen+1)
         var max = Math.max(...arrPop);
