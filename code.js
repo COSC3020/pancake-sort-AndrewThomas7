@@ -19,8 +19,6 @@ function flip(array, n) {
     }
     return Ostack;
 }
-Testarr = [5, 4, 17, 6]
-console.log(flip(Testarr, 1))
 
 // Use only flip() here to manipulate the array
 function pancakeSort(array) {
