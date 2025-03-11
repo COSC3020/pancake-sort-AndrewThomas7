@@ -32,7 +32,10 @@ function pancakeSort(array) {
         if(ArrayLen==0){
             return array;
         }
-        while(array[ArrayLen]===array[ArrayLen-1]&&array.length!=0){
+        if(Flipindex<0 || Flipindex>=ArrayLen+1){
+            return array;
+        }
+        while(array[ArrayLen]===array[ArrayLen-1]&&array.length>0){
             ArrayLen-=1;
 
        }
