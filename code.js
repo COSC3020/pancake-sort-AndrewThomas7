@@ -14,11 +14,13 @@ function flip(array, n) {
         Ostack.push(B[B.length - 1])
         B.pop()
     }
-    for (i > n; i < array.length; i++) {
+    for (i = n; i < array.length; i++) {
         Ostack.splice(i, 0, array[i]);
     }
     return Ostack;
 }
+Testarr = [5, 4, 17, 6]
+console.log(flip(Testarr, 1))
 
 // Use only flip() here to manipulate the array
 function pancakeSort(array) {
@@ -37,6 +39,9 @@ function pancakeSort(array) {
         if (ArrayLen == 1 && array[0]==Math.min(...arrPop)) {
             return array;
         }
+        // if(max==array[1]){
+        //     return pancakeSort_(flip(array,ArrayLen))
+        // }
         if (Flipindex == 0 ||max==array[array.length-1]) {
             ArrayLen -= 1;
             return pancakeSort_(array,ArrayLen);
