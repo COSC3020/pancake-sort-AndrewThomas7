@@ -22,10 +22,10 @@ function flip(array, n) {
 
 // Use only flip() here to manipulate the array
 function pancakeSort(array) {
-    if(array.len==0){
-        return array;
-    }
     function pancakeSort_(array,ArrayLen){
+        if(array.len==0){
+            return array;
+        }
         var arrPop=array.slice(0,ArrayLen+1)
         var max = Math.max(...arrPop);
         var Flipindex=array.indexOf(max)
