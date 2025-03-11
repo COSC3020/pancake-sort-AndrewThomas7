@@ -27,7 +27,7 @@ function pancakeSort(array) {
     function pancakeSort_(array,ArrayLen){
         var arrPop=array.slice(0,ArrayLen+1)
         var max = Math.max(...arrPop);
-        var Flipindex=array.indexOf(max)
+        // var Flipindex=array.indexOf(max)
         var Flipindex = ArrayLen - arrPop.indexOf(max);
         if(array.len==0){
             return array;
@@ -42,12 +42,12 @@ function pancakeSort(array) {
         // if(max==array[1]){
         //     return pancakeSort_(flip(array,ArrayLen))
         // }
-        if (Flipindex == 0) {
+        if (Flipindex == 0 ||max==array[array.length-1]) {
             ArrayLen -= 1;
             return pancakeSort_(array,ArrayLen);
         }
         var fliparr=flip(array,Flipindex+1);
         return pancakeSort_(fliparr,ArrayLen)
     };
-        return pancakeSort_(array,array.length-1)
+        return pancakeSort_(array,array.length)
 }
