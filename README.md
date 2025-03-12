@@ -23,6 +23,17 @@ I've provided some basic testing code that uses
 Hint: Start by thinking about the calls to `flip()` required to move a *single*
 element into its correct position.
 
+“I certify that I have listed all sources used to complete this exercise, including the use
+of any Large Language Models. All of the work is my own, except where stated
+otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is
+suspected, charges may be filed against me without prior notice.”-Andrew Thomas
+
+Sources:
+
+1.)-https://sortvisualizer.com/pancakesort/- Used this website to get a visual for how pancake sort worked as well as learning it was related to selection sort
+2.)- https://www.youtube.com/watch?v=g-PGLbMth_g
+
+
 ## Runtime Analysis
 
 What is the asymptotic runtime ($\Theta$) of your algorithm in terms of the
