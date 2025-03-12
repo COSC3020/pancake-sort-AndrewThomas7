@@ -19,39 +19,25 @@ function flip(array, n) {
     }
     return Ostack;
 }
+// console.log(flip(Testarr, 1))
 
 // Use only flip() here to manipulate the array
 function pancakeSort(array) {
-    function pancakeSort_(array,ArrayLen){
+    var ArrayLen=array.length-1
+    while(ArrayLen>0){
         var arrPop=array.slice(0,ArrayLen+1)
         var max = Math.max(...arrPop);
-        if(array.indexOf(max)==array[1]){
-            var Flipindex = ArrayLen - arrPop.indexOf(max);
-        }else{
-            var Flipindex=array.indexOf(max)
+        var Flipindex = arrPop.indexOf(max)+1;
+        if(max!=array[ArrayLen]&&max!=array[0]){
+            array=flip(array,Flipindex);
         }
-        if(ArrayLen==0){
-            return array;
+        if(max==array[0]){
+           array= flip(array,ArrayLen+1);
         }
-        if(Flipindex<0 || Flipindex>=ArrayLen+1){
-            return array;
-        }
-        while(array[ArrayLen]===array[ArrayLen-1]&&array.length>0){
-            ArrayLen-=1;
+        if(max==array[ArrayLen]){
+               ArrayLen= ArrayLen-1;
+            }
 
-       }
-        if (ArrayLen == 1 && array[0]==Math.min(...arrPop)) {
-            return array;
-        }
-        // if(max==array[1]){
-        //     return pancakeSort_(flip(array,ArrayLen))
-        // }
-        if (Flipindex == 0 ||max==array[array.length-1]) {
-            ArrayLen -= 1;
-            return pancakeSort_(array,ArrayLen);
-        }
-        var fliparr=flip(array,Flipindex+1);
-        return pancakeSort_(fliparr,ArrayLen)
-    };
-        return pancakeSort_(array,array.length)
+    }
+    return array;
 }
