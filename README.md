@@ -34,6 +34,10 @@ Sources:
 
 2.)- https://www.youtube.com/watch?v=g-PGLbMth_g
 
+3.)https://www.geeksforgeeks.org/how-to-analyse-loops-for-complexity-analysis-of-algorithms/
+
+4.) https://github.com/COSC3020/pancake-sort-Hrics12-1/blob/main/README.md-Used this repository to see what I should do because I was confused on how to find the time complexity without a recurrance relation.
+
 
 ## Runtime Analysis
 
