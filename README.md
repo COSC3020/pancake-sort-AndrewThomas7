@@ -110,7 +110,7 @@ Here before we check the first condition we run the max math function which of t
 
 Now our max value will be the first item so we run another comparison and do flip again, however this time we flip the whole list and end up with n+1.
 
-We hit the last conditional which is just one comparison. Giving a total of $n(2n+2+n+1+1) $ comparisons(*The additional n comes from the fact that the while loop iterates n times*). Dropping the lower order terms and constants we then have $n(n)=n^2=\theta(n^2)$
+We hit the last conditional which is just one comparison. Giving a total of $n(2n+2+n+1+1)$ comparisons(*The additional n comes from the fact that the while loop iterates n times*). Dropping the lower order terms and constants we then have $n(n)=n^2=\theta(n^2)$
 
 *<span style='color:Green'>Best Case:</span>* List is already sorted and only has to run the third conditional each time. However we still run through the length of the list once checking the max every time which is still a complexity of $\theta(n^2)$.
 
